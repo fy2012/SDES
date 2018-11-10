@@ -12,27 +12,27 @@ public class Main {
         SDES test4 = new SDES(new byte[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, new byte[]{ 0, 0, 0, 0, 0, 1, 0, 0 }, "Decrypt");
         printResult(test4.getKey(), test4.getPlaintext(), test4.getCiphertext());
 
-        System.out.println("\n\nAnswers to number 1:");
+        System.out.println("\n\nAnswers to part 1:");
         System.out.println("Raw Key\t\tPlain Text\tCipher Text");
-        SDES peoblem_a = new SDES(new byte[]{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, new byte[]{ 0, 0, 0, 0, 0, 0, 0, 0 }, "Encrypt");
-        SDES peoblem_b = new SDES(new byte[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, new byte[]{ 1, 1, 1, 1, 1, 1, 1, 1 }, "Encrypt");
-        SDES peoblem_c = new SDES(new byte[]{ 0, 0, 0, 0, 0, 1, 1, 1, 1, 1 }, new byte[]{ 0, 0, 0, 0, 0, 0, 0, 0 }, "Encrypt");
-        SDES peoblem_d = new SDES(new byte[]{ 0, 0, 0, 0, 0, 1, 1, 1, 1, 1 }, new byte[]{ 1, 1, 1, 1, 1, 1, 1, 1 }, "Encrypt");
-        SDES peoblem_e = new SDES(new byte[]{ 1, 0, 0, 0, 1, 0, 1, 1, 1, 0 }, new byte[]{ 0, 0, 0, 1, 1, 1, 0, 0 }, "Decrypt");
-        SDES peoblem_f = new SDES(new byte[]{ 1, 0, 0, 0, 1, 0, 1, 1, 1, 0 }, new byte[]{ 1, 1, 0, 0, 0, 0, 1, 0 }, "Decrypt");
-        SDES peoblem_g = new SDES(new byte[]{ 0, 0, 1, 0, 0, 1, 1, 1, 1, 1 }, new byte[]{ 1, 0, 0, 1, 1, 1, 0, 1 }, "Decrypt");
-        SDES peoblem_h = new SDES(new byte[]{ 0, 0, 1, 0, 0, 1, 1, 1, 1, 1 }, new byte[]{ 1, 0, 0, 1, 0, 0, 0, 0 }, "Decrypt");
+        SDES problem_a = new SDES(new byte[]{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, new byte[]{ 0, 0, 0, 0, 0, 0, 0, 0 }, "Encrypt");
+        SDES problem_b = new SDES(new byte[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, new byte[]{ 1, 1, 1, 1, 1, 1, 1, 1 }, "Encrypt");
+        SDES problem_c = new SDES(new byte[]{ 0, 0, 0, 0, 0, 1, 1, 1, 1, 1 }, new byte[]{ 0, 0, 0, 0, 0, 0, 0, 0 }, "Encrypt");
+        SDES problem_d = new SDES(new byte[]{ 0, 0, 0, 0, 0, 1, 1, 1, 1, 1 }, new byte[]{ 1, 1, 1, 1, 1, 1, 1, 1 }, "Encrypt");
+        SDES problem_e = new SDES(new byte[]{ 1, 0, 0, 0, 1, 0, 1, 1, 1, 0 }, new byte[]{ 0, 0, 0, 1, 1, 1, 0, 0 }, "Decrypt");
+        SDES problem_f = new SDES(new byte[]{ 1, 0, 0, 0, 1, 0, 1, 1, 1, 0 }, new byte[]{ 1, 1, 0, 0, 0, 0, 1, 0 }, "Decrypt");
+        SDES problem_g = new SDES(new byte[]{ 0, 0, 1, 0, 0, 1, 1, 1, 1, 1 }, new byte[]{ 1, 0, 0, 1, 1, 1, 0, 1 }, "Decrypt");
+        SDES problem_h = new SDES(new byte[]{ 0, 0, 1, 0, 0, 1, 1, 1, 1, 1 }, new byte[]{ 1, 0, 0, 1, 0, 0, 0, 0 }, "Decrypt");
 
-        printResult(peoblem_a.getKey(), peoblem_a.getPlaintext(), peoblem_a.getCiphertext());
-        printResult(peoblem_b.getKey(), peoblem_b.getPlaintext(), peoblem_b.getCiphertext());
-        printResult(peoblem_c.getKey(), peoblem_c.getPlaintext(), peoblem_c.getCiphertext());
-        printResult(peoblem_d.getKey(), peoblem_d.getPlaintext(), peoblem_d.getCiphertext());
-        printResult(peoblem_e.getKey(), peoblem_e.getPlaintext(), peoblem_e.getCiphertext());
-        printResult(peoblem_f.getKey(), peoblem_f.getPlaintext(), peoblem_f.getCiphertext());
-        printResult(peoblem_g.getKey(), peoblem_g.getPlaintext(), peoblem_g.getCiphertext());
-        printResult(peoblem_h.getKey(), peoblem_h.getPlaintext(), peoblem_h.getCiphertext());
+        printResult(problem_a.getKey(), problem_a.getPlaintext(), problem_a.getCiphertext());
+        printResult(problem_b.getKey(), problem_b.getPlaintext(), problem_b.getCiphertext());
+        printResult(problem_c.getKey(), problem_c.getPlaintext(), problem_c.getCiphertext());
+        printResult(problem_d.getKey(), problem_d.getPlaintext(), problem_d.getCiphertext());
+        printResult(problem_e.getKey(), problem_e.getPlaintext(), problem_e.getCiphertext());
+        printResult(problem_f.getKey(), problem_f.getPlaintext(), problem_f.getCiphertext());
+        printResult(problem_g.getKey(), problem_g.getPlaintext(), problem_g.getCiphertext());
+        printResult(problem_h.getKey(), problem_h.getPlaintext(), problem_h.getCiphertext());
 
-        System.out.println("\n\nAnswers to number 2:");
+        System.out.println("\n\nAnswers to part 2:");
         System.out.println("RawKey1\t\tRawKey2\t\tPlaintext\tCiphertext");
         TripleSDES problem_i = new TripleSDES(new byte[]{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, new byte[]{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, new byte[]{ 0, 0, 0, 0, 0, 0, 0, 0 }, "Encrypt");
         TripleSDES problem_j = new TripleSDES(new byte[]{ 1, 0, 0, 0, 1, 0, 1, 1, 1, 0 }, new byte[]{ 0, 1, 1, 0, 1, 0, 1, 1, 1, 0 }, new byte[]{ 1, 1, 0, 1, 0, 1, 1, 1 }, "Encrypt");
@@ -52,6 +52,76 @@ public class Main {
         printx3Result(problem_o.getRawkey1(), problem_o.getRawkey2(), problem_o.getPlaintext(), problem_o.getCiphertext());
         printx3Result(problem_p.getRawkey1(), problem_p.getRawkey2(), problem_p.getPlaintext(), problem_p.getCiphertext());
 
+        System.out.println("\n\nAnswers to part 3:\n#1.");
+        SDES problem_q = new SDES(new byte[]{ 0, 1, 1, 1, 0, 0, 1, 1, 0, 1 }, CASCII.Convert("CRYPTOGRAPHY"), "Encrypt");
+        for(int i : problem_q.getCiphertext())
+            System.out.print(problem_q.getCiphertext()[i]);
+
+        byte[] message1 = { 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
+                0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1,
+                1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1,
+                0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1,
+                1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0,
+                1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0,
+                1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1,
+                0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0,
+                1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1,
+                0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0,
+                0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0,
+                1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1,
+                0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,
+                0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0,
+                1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0,
+                0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0,
+                1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0,
+                1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0,
+                1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0,
+                0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1,
+                0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1,
+                1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
+                0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1,
+                0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1,
+                0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1,
+                1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1,
+                1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1};
+
+        byte[] key = Crack.getKey(message1);
+        SDES problem_r = new SDES(key, message1, "Decrypt");
+        System.out.println("\n\n#2.");
+        System.out.print("Key: ");
+        for(int i = 0; i < key.length; i++)
+            System.out.print(key[i]);
+        System.out.println('\n' + CASCII.toString(problem_r.getPlaintext()));
+
+        byte[] message2 = { 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0,
+                0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0,
+                0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1,
+                1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1,
+                1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1,
+                1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0,
+                1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0,
+                0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+                0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0,
+                0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0,
+                1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0};
+
+        System.out.println("\n\n#3.");
+        System.out.print("Key1: ");
+        byte[] k1 = new byte[10];
+        byte[] k2 = new byte[10];
+        byte[] key1_and_2 = Crack.getKey1_and_2(message2);
+        for(int i = 0; i < key1_and_2.length; i++) {
+            System.out.print(key1_and_2[i]);
+            if(i < 10)
+                k1[i] = key1_and_2[i];
+            if(i == 9)
+                System.out.print("\nKey2: ");
+            if(i > 9)
+                k2[i-10] = key1_and_2[i];
+        }
+        TripleSDES problem_s = new TripleSDES(k1, k2, message2, "Decrypt");
+        System.out.println('\n' + CASCII.toString(problem_s.getPlaintext()));
     }
 
     public static void  printResult(byte[] k, byte[] p, byte[] c){

@@ -1,137 +1,149 @@
 public class CASCII {
+    private static byte Space = 0;
+    private static byte A = 1;
+    private static byte B = 2;
+    private static byte C = 3;
+    private static byte D = 4;
+    private static byte E = 5;
+    private static byte F = 6;
+    private static byte G = 7;
+    private static byte H = 8;
+    private static byte I = 9;
+    private static byte J = 10;
+    private static byte K = 11;
+    private static byte L = 12;
+    private static byte M = 13;
+    private static byte N = 14;
+    private static byte O = 15;
+    private static byte P = 16;
+    private static byte Q = 17;
+    private static byte R = 18;
+    private static byte S = 19;
+    private static byte T = 20;
+    private static byte U = 21;
+    private static byte V = 22;
+    private static byte W = 23;
+    private static byte X = 24;
+    private static byte Y = 25;
+    private static byte Z = 26;
+    private static byte Comma = 27;
+    private static byte Question = 28;
+    private static byte Colon = 29;
+    private static byte Period = 30;
+    private static byte Apostrophe = 31;
+
     public CASCII() {
     }
 
-    public static byte Convert(char c)
-    {
-        switch ( c )
-        {
-            case 'A':
-                return A;
+    public static byte Convert(char Char) {
+        if (Char == 'A')
+            return A;
 
-            case 'B':
-                return B;
+        if (Char == 'B')
+            return B;
 
-            case 'C':
-                return C;
+        if (Char == 'C')
+            return C;
 
-            case 'D':
-                return D;
+        if (Char == 'D')
+            return D;
 
-            case 'E':
-                return E;
+        if (Char == 'E')
+            return E;
 
-            case 'F':
-                return F;
+        if (Char == 'F')
+            return F;
 
-            case 'G':
-                return G;
+        if (Char == 'G')
+            return G;
 
-            case 'H':
-                return H;
+        if (Char == 'H')
+            return H;
 
-            case 'I':
-                return I;
+        if (Char == 'I')
+            return I;
 
-            case 'J':
-                return J;
+        if (Char == 'J')
+            return J;
 
-            case 'K':
-                return K;
+        if (Char == 'K')
+            return K;
 
-            case 'L':
-                return L;
+        if (Char == 'L')
+            return L;
 
-            case 'M':
-                return M;
+        if (Char == 'M')
+            return M;
 
-            case 'N':
-                return N;
+        if (Char == 'N')
+            return N;
 
-            case 'O':
-                return O;
+        if (Char == 'O')
+            return O;
 
-            case 'P':
-                return P;
+        if (Char == 'P')
+            return P;
 
-            case 'Q':
-                return Q;
+        if (Char == 'Q')
+            return Q;
 
-            case 'R':
-                return R;
+        if (Char == 'R')
+            return R;
 
-            case 'S':
-                return S;
+        if (Char == 'S')
+            return S;
 
-            case 'T':
-                return T;
+        if (Char == 'T')
+            return T;
 
-            case 'U':
-                return U;
+        if (Char == 'U')
+            return U;
 
-            case 'V':
-                return V;
+        if (Char == 'V')
+            return V;
 
-            case 'W':
-                return W;
+        if (Char == 'W')
+            return W;
 
-            case 'X':
-                return X;
+        if (Char == 'X')
+            return X;
 
-            case 'Y':
-                return Y;
+        if (Char == 'Y')
+            return Y;
 
-            case 'Z':
-                return Z;
+        if (Char == 'Z')
+            return Z;
 
-            case '?':
-                return Question;
+        if (Char == '?')
+            return Question;
 
-            case '\'':
-                return Apostrophe;
+        if (Char == '\'')
+            return Apostrophe;
 
-            case ':':
-                return Colon;
+        if (Char == ':')
+            return Colon;
 
-            case ',':
-                return Comma;
+        if (Char == ',')
+            return Comma;
 
-            case '.':
-                return Period;
+        if (Char == '.')
+            return Period;
 
-            case ' ':
-                return Space;
+        if (Char == ' ')
+            return Space;
 
-            default:
-                throw new java.lang.IllegalArgumentException(
-                        "Character must be upper case A-Z or { '\'', ':', ',', '.', '?', ' '} -- found: " + c);
-        }
-
+        return '0';
     }
-    public static char Convert(byte[] bits)
-    {
-        // just a general case of the bounded one
-        return Convert(bits, 0, bits.length-1);
-    }
+
+
 
     public static char Convert( byte[] bits, int start, int end)
     {
-        // check that it's 5 bits long only
-        if ( end - start != 4 )
-        {
-            throw new java.lang.IllegalArgumentException("Argument must only be five bits long");
-        }
-
-        // now find out what number this is
         int val = 0;
-        for ( int i = start; i <= end; i++)
-        {
-            // each bit over is a raising of the power of two
-            // multiply it by the bit value - one or zero
+        for ( int i = start; i <= end; i++){
             val += java.lang.Math.pow(2, i-start) * bits[i];
         }
 
-        // now value is the number for the letter
         switch ( val )
         {
             case 0:
@@ -206,47 +218,37 @@ public class CASCII {
 
     public static byte[] Convert( char[] text )
     {
-        // make an output array of bytes that is the converted text
         byte out[] = new byte[text.length];
 
-        // go through each character in the text and convert it
         for ( int i = 0; i < text.length; i ++ )
         {
             out[i] = Convert(text[i]);
         }
 
-        // send back the new byte array
         return out;
     }
 
     public static byte[] Convert( String s )
     {
-        // make this String into a byte array in CASCII form
         byte cas[] = new byte[s.length()];
 
-        // convert it to CASCII byte encoding
         for ( int i=0; i < s.length(); i++)
         {
             cas[i] = CASCII.Convert(s.charAt(i));
         }
 
-        // now expand the bytes to be just bits
         int size = 5 * s.length();
-        // pad it to be a multiple of 8
         size = size + ( 8 - (size % 8) );
         byte bits[] = new byte[size];
-        // set them to be zero to begin
         for ( int i = 0; i < bits.length; i++)
         {
             bits[i] = 0;
         }
 
-        // expand the character out into bits
         byte b;
         for ( int j = 0; j < cas.length; j++)
         {
             b = cas[j];
-            // make this 5 bit number into real bits
             for (int i = 0; b != 0; i++) {
                 if (b % 2 == 0) {
                     bits[j*5 + i] = 0;
@@ -259,70 +261,20 @@ public class CASCII {
             }
         }
 
-        // send back the new byte array
         return bits;
     }
 
-
-    /**
-     * Takes an array of CASCII bits and returns an ASCII encoded
-     * String.  If cas.length is not a multiple of 5, the remaining
-     * bits are discarded.
-     *
-     * @param cas The CASCII text to convert
-     * @return The ASCII encoded string
-     */
     public static String toString( byte[] cas )
     {
-        // make an output array of bytes that is the converted text
         char output[] = new char[cas.length/5];
 
-        // go through each character in the text and convert it
         for ( int block = 0; block < cas.length; block += 5 )
         {
-            // if it's reached the end of the 5-bit strings, quit
             if ( block + 5 > cas.length ) break;
 
             output[block/5] = CASCII.Convert(cas, block, block+4);
         }
 
-        // send back the new byte array
         return new String(output);
     }
-
-
-    // Make up the letters that will be in the enumeration
-    public static byte Space = 0;
-    public static byte A = 1;
-    public static byte B = 2;
-    public static byte C = 3;
-    public static byte D = 4;
-    public static byte E = 5;
-    public static byte F = 6;
-    public static byte G = 7;
-    public static byte H = 8;
-    public static byte I = 9;
-    public static byte J = 10;
-    public static byte K = 11;
-    public static byte L = 12;
-    public static byte M = 13;
-    public static byte N = 14;
-    public static byte O = 15;
-    public static byte P = 16;
-    public static byte Q = 17;
-    public static byte R = 18;
-    public static byte S = 19;
-    public static byte T = 20;
-    public static byte U = 21;
-    public static byte V = 22;
-    public static byte W = 23;
-    public static byte X = 24;
-    public static byte Y = 25;
-    public static byte Z = 26;
-    public static byte Comma = 27;
-    public static byte Question = 28;
-    public static byte Colon = 29;
-    public static byte Period = 30;
-    public static byte Apostrophe = 31;
-
 }

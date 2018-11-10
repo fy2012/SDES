@@ -1,7 +1,7 @@
 public class SDES {
-    byte[] rawKey;
-    byte[] plaintext;
-    byte[] ciphertext;
+    private byte[] rawKey;
+    private byte[] plaintext;
+    private byte[] ciphertext;
 
     private byte[][] sBox1 = {{1, 0, 3, 2}, {3, 2, 1, 0}, {0, 2, 1, 3}, {3, 1, 3, 2}};
 
@@ -47,22 +47,6 @@ public class SDES {
         return ciphertext;
     }
 
-    private int getSize(int l){
-        int size = l / 8;
-        if(l % 8 > 0)
-            size++;
-        size*=8;
-        return size;
-    }
-
-    private byte[] getSubArray(byte[] a, int x, int y){
-        byte[] subArray = new byte[y-x];
-        for(int i = x; i < y; i++){
-            subArray[i] = a[i];
-        }
-        return subArray;
-    }
-
     public byte[] Encrypt(byte[] pt){
         byte[] k1 = new byte[8];
         byte[] k2 = new byte[8];
@@ -100,8 +84,26 @@ public class SDES {
         return plaintext;
     }
 
-    public byte[] EncryptBlocks(byte[] k1, byte[] k2, byte[] pt){
-        byte[] temp = initialPermute(pt);
+    private int getSize(int l){
+        int size = l / 8;
+        if(l % 8 > 0)
+            size++;
+        size*=8;
+        return size;
+    }
+
+    private byte[] getSubArray(byte[] a, int x, int y){
+        byte[] subArray = new byte[y-x];
+        int index = 0;
+        for(int i = x; i < y; i++){
+            subArray[index] = a[i];
+            index++;
+        }
+        return subArray;
+    }
+
+    public byte[] EncryptBlocks(byte[] k1, byte[] k2, byte[] subpt){
+        byte[] temp = initialPermute(subpt);
         temp = applyKey(temp, k1);
         temp = switchHalves(temp);
         temp = applyKey(temp, k2);
@@ -109,8 +111,8 @@ public class SDES {
         return temp;
     }
 
-    public byte[] DecryptBlocks(byte[] k1, byte[] k2, byte[] ct){
-        byte[] temp = initialPermute(ct);
+    public byte[] DecryptBlocks(byte[] k1, byte[] k2, byte[] subct){
+        byte[] temp = initialPermute(subct);
         temp = applyKey(temp, k2);
         temp = switchHalves(temp);
         temp = applyKey(temp, k1);

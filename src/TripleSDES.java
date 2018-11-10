@@ -1,8 +1,8 @@
 public class TripleSDES {
-    byte[] rawkey1;
-    byte[] rawkey2;
-    byte[] plaintext;
-    byte[] ciphertext;
+    private byte[] rawkey1;
+    private byte[] rawkey2;
+    private byte[] plaintext;
+    private byte[] ciphertext;
 
     public TripleSDES(){
 
