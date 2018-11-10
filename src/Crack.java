@@ -47,6 +47,8 @@ public class Crack {
 
     public static byte[] getKey1_and_2(byte[] message) {
         byte[] key = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,};
+        byte[] k1 = new byte[10];
+        byte[] k2 = new byte[10];
         byte[] plaintext;
 
         for (int bit_0 = 0; bit_0 < 2; bit_0++) {
@@ -89,8 +91,6 @@ public class Crack {
                                                                                     key[18] = (byte) bit_18;
                                                                                     for (int bit_19 = 0; bit_19 < 2; bit_19++) {
                                                                                         key[19] = (byte) bit_19;
-                                                                                        byte[] k1 = new byte[10];
-                                                                                        byte[] k2 = new byte[10];
                                                                                         k1 = getSubArray(key, 0, 10);
                                                                                         k2 = getSubArray(key, 10, 20);
 
@@ -125,6 +125,7 @@ public class Crack {
         }
         return key;
     }
+
     private static byte[] getSubArray(byte[] a, int x, int y) {
         byte[] subArray = new byte[y - x];
         int index = 0;

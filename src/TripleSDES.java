@@ -4,10 +4,6 @@ public class TripleSDES {
     private byte[] plaintext;
     private byte[] ciphertext;
 
-    public TripleSDES(){
-
-    }
-
     public TripleSDES(byte[] k1, byte[] k2, byte[] t, String c){
         setRawkey1(k1);
         setRawkey2(k2);

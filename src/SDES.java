@@ -7,10 +7,6 @@ public class SDES {
 
     private byte[][] sBox2 = {{0, 1, 2, 3}, {2, 0, 1, 3}, {3, 0, 1, 0}, {2, 1, 0, 3}};
 
-    public SDES(){
-
-    }
-
     public SDES(byte[] k, byte[] t, String c){
         setKey(k);
         if(c.equals("Encrypt")){
